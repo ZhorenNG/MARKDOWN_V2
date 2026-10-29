@@ -50,6 +50,92 @@ Una API es una interfaz que permite que distintas aplicaciones intercambien info
 
 Estas categorías no son cerradas: WordPress también puede utilizarse como backend headless mediante su API.
 
+### Arquitectura Headless CMS
+
+En un CMS tradicional, como una instalación habitual de WordPress, la gestión del contenido y la presentación de la web forman parte del mismo sistema. En un **Headless CMS**, esas tareas se separan: el CMS administra la información y una aplicación independiente decide cómo mostrarla. El contenido se entrega mediante una **API**, normalmente como datos JSON, en lugar de depender de una única plantilla del gestor. [Explicación de Contentful](https://www.contentful.com/headless-cms/).
+
+El nombre *headless* puede resultar confuso. No significa que el editor se quede sin panel de administración: lo que se elimina es la dependencia de una presentación pública integrada. Los redactores siguen creando y organizando contenido desde una interfaz, mientras los desarrolladores preparan la web, la aplicación móvil u otros canales. [Explicación de Strapi](https://strapi.io/blog/headless-cms-explained).
+
+#### Componentes de la arquitectura
+
+| Componente | Función | Ejemplo orientativo |
+|---|---|---|
+| Panel de administración | Permite crear, revisar y publicar contenido, además de gestionar los permisos disponibles. | Un editor redacta una noticia. |
+| Repositorio de contenido | Guarda los datos estructurados y las relaciones entre ellos. | Una noticia tiene título, texto, autor e imagen. |
+| API | Permite consultar el contenido desde aplicaciones autorizadas. | La web solicita las noticias publicadas y recibe JSON. |
+| Frontend independiente | Convierte esos datos en la interfaz que ve el usuario. | Astro construye la web y una aplicación móvil muestra una versión adaptada. |
+
+La organización por repositorio, API y frontend se describe en la [documentación explicativa de Contentful](https://www.contentful.com/headless-cms/). El panel es la herramienta de trabajo del equipo editorial, no la web pública.
+
+# Ranking de los 5 CMS Más Utilizados del Mundo
+
+Un **Sistema de Gestión de Contenido** (*Content Management System* o **CMS**) permite crear, gestionar y modificar contenido en un sitio web sin necesidad de escribir código desde cero. A continuación se presenta el ranking actualizado de los 5 CMS más populares a nivel global, según la cuota de mercado entre sitios con CMS conocido y su presencia general en la web.
+
+---
+
+## 📊 Tabla Comparativa Global
+
+| Ranking | Plataforma (CMS) | Cuota en Mercado CMS (%) | Presencia en Toda la Web (%) | Enfoque Principal |
+| :---: | :--- | :---: | :---: | :--- |
+| **1** | **WordPress** | 58.7% – 59.1% | 40.2% – 41.2% | Todo tipo de webs (Blogs, Empresas, E-commerce) |
+| **2** | **Shopify** | 7.6% – 7.8% | 5.3% – 5.4% | Comercio Electrónico (*E-commerce*) |
+| **3** | **Wix** | 6.1% – 6.2% | 4.2% – 4.3% | Creador visual sin código (*No-code*) |
+| **4** | **Squarespace** | 3.5% – 3.6% | 2.5% | Diseño visual, Portafolios y Creativos |
+| **5** | **Webflow / Joomla** | 1.2% – 1.7% | 0.9% – 1.2% | Diseñadores Web Profesionales / Portales complejos |
+
+---
+
+## 🔍 Análisis Detallado por Plataforma
+
+### 1. WordPress (WordPress.org)
+* **Cuota de mercado CMS:** ~58.7% – 59.1%
+* **Tipo:** Código abierto (*Open-source*) / Autohospedado
+* **Descripción:** Mantiene un dominio abrumador en el ecosistema web global. Su flexibilidad basada en un ecosistema masivo de más de 59,000 *plugins* y 13,000 *temas* permite construir desde blogs personales hasta grandes medios de comunicación global.
+* **Puntos fuertes:** Gran comunidad, escalabilidad, control total sobre el código y SEO.
+
+### 2. Shopify
+* **Cuota de mercado CMS:** ~7.6% – 7.8%
+* **Tipo:** Plataforma como Servicio (*SaaS*)
+* **Descripción:** Es la solución líder mundial orientada exclusivamente al comercio electrónico. Simplifica la gestión de tienda, pagos, inventario e infraestructura técnica, eliminando las complicaciones de servidor y seguridad para los comerciantes.
+* **Puntos fuertes:** Excelente rendimiento de conversión, seguridad gestionada e integración fluida con pasarelas de pago globales.
+
+### 3. Wix
+* **Cuota de mercado CMS:** ~6.1% – 6.2%
+* **Tipo:** Creador web SaaS (*Drag and Drop*)
+* **Descripción:** Plataforma que ha experimentado un crecimiento acelerado gracias a su editor visual intuitivo y mejoras constantes en rendimiento (*Core Web Vitals*). Es la opción preferida por pequeños negocios y profesionales independientes.
+* **Puntos fuertes:** Facilidad de uso, hosting incluido y plantillas de alta calidad sin necesidad de programación.
+
+### 4. Squarespace
+* **Cuota de mercado CMS:** ~3.5% – 3.6%
+* **Tipo:** Plataforma integrada SaaS
+* **Descripción:** Destaca por sus diseños limpios y minimalistas orientados a creadores de contenido, artistas, fotógrafos y marcas enfocadas en la identidad visual.
+* **Puntos fuertes:** Estética visual pulida, herramientas integradas de marketing y boletines, e interfaz simplificada.
+
+### 5. Webflow / Joomla
+* **Cuota de mercado CMS:** ~1.2% – 1.7%
+* **Tipo:** Diseñador SaaS (*Webflow*) / Código abierto (*Joomla*)
+* **Descripción:** 
+  * **Webflow:** Se consolida entre diseñadores web y agencias por permitir maquetar con control visual directo sobre la estructura CSS y HTML sin escribir código manualmente.
+  * **Joomla:** Mantiene presencia en portales institucionales y sistemas de gestión avanzados de usuarios.
+* **Puntos fuertes:** Control fino sobre el diseño visual y la estructura web.
+
+---
+
+## 📈 Tendencias Clave del Mercado
+
+1. **Avance de las plataformas SaaS (*Hosted Builders*):** Soluciones como Shopify, Wix y Squarespace continúan ganando terreno frente a plataformas tradicionales que requieren mantenimiento manual de servidores.
+2. **Prioridad en el Rendimiento Web:** Los indicadores *Core Web Vitals* de Google han motivado a plataformas cerradas a optimizar la velocidad de carga de sus sitios.
+3. **Comercio Unificado:** El crecimiento del *e-commerce* ha posicionado a Shopify como el CMS con mayor aceleración comercial de la década.
+
+---
+
+## 📚 Fuentes y Referencias
+
+* **[W3Techs - World Wide Web Technology Surveys](https://w3techs.com/technologies/overview/content_management):** Monitorización diaria de tecnologías web en el TOP de sitios de internet.
+* **[BuiltWith Trends](https://builtwith.com/):** Base de datos e indexación técnica de la presencia de CMS en sitios en vivo.
+* **[Colorlib CMS Market Share Report](https://colorlib.com/wp/cms-market-share/):** Análisis consolidado de cuota de mercado, estadísticas interanuales y métricas de rendimiento.
+* **[DiviFlash CMS Industry Report](https://diviflash.com/cms-statistics/):** Recopilación estadística de tendencias en plataformas de gestión de contenido.
+
 ### Según su finalidad
 
 También podemos distinguir herramientas orientadas a blogs, webs corporativas o comercio electrónico. Es otra forma de clasificarlas, no una arquitectura diferente. Por ejemplo, WordPress se utiliza para publicar contenidos y PrestaShop está orientado a tiendas online.
@@ -105,13 +191,6 @@ El nombre de un archivo, como `practica-redes.md`, se puede destacar usando cód
 
 [Continuar con los generadores de sitios estáticos y la comparación entre Jekyll, Hugo y Astro](ssg.md).
 
-## Revisión del documento
-
-- [x] Explicar qué es un CMS y cómo funciona.
-- [x] Incluir tipos, ejemplos y comparación con un SSG.
-- [x] Añadir imagen, tabla, listas, cita y código.
-- [x] Enlazar el vídeo y el documento sobre SSG.
-- [ ] Comprobar la vista previa y hacer la captura en GitHub.
 
 ## Fuentes consultadas
 
@@ -119,3 +198,4 @@ El nombre de un archivo, como `practica-redes.md`, se puede destacar usando cód
 - [Strapi: CMS headless frente a tradicional](https://strapi.io/headless-cms/headless-cms-vs-traditional-cms-understanding-the-difference).
 - [Pantheon: WordPress tradicional y headless](https://pantheon.io/learning-center/headless/cms-vs-wordpress).
 - [Documentación de Jekyll](https://jekyllrb.com/docs/).
+- 
