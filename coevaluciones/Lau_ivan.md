@@ -56,5 +56,5 @@ El trabajo presenta un nivel sobresaliente con una puntuación de 8,85/10 (5,35 
 
 | Propuesta | Respuesta y decisión razonada | Corrección aplicada y archivo | Commit |
 | :--- | :--- | :--- | :--- |
-| **P1** | [Pendiente de respuesta] | [Pendiente de corrección] | [Enlace] |
-| **P2** | [Pendiente de respuesta] | [Pendiente de corrección] | [Enlace] |
+| **P1** | [Aceptada] | [Añadi el ranking top 5 que se me pidio] | [https://github.com/ZhorenNG/MARKDOWN_V2/pull/2/changes/255a66d7782d8f88bf6eb8e034b7436181182903] |
+| **P2** | [Aceptada] | [Amplie la explicacion de la arquitectura Headless] | [https://github.com/ZhorenNG/MARKDOWN_V2/pull/2/changes/255a66d7782d8f88bf6eb8e034b7436181182903] |
